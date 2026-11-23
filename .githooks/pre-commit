@@ -1,0 +1,3 @@
+#!/bin/sh
+# Refuse a commit that adds a secret or a private network address.
+exec gitleaks git --pre-commit --staged --config .gitleaks.toml --redact --no-banner

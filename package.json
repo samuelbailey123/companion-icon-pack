@@ -1,0 +1,22 @@
+{
+  "name": "companion-icon-pack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Free, legible button icons for Bitfocus Companion and Stream Deck",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node src/build.js",
+    "sheet": "node preview/contact-sheet.js",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "1.0.1",
+    "@vitest/coverage-v8": "3.2.4",
+    "vitest": "3.2.4"
+  }
+}
