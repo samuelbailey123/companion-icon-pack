@@ -1,14 +1,3 @@
-/**
- * CLI wrapper: assemble the library and write it to disk.
- *
- * All assembly logic lives in `library.js` so it can be tested without filesystem access.
- * This file is intentionally I/O only, and is excluded from coverage for that reason.
- *
- * Writes icons/svg/<name>.svg, icons/png/<name>.png (144 px, the Stream Deck key size) and
- * icons/library.companionconfig. The output is committed so anyone can download it.
- *
- * Run: npm run build
- */
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { Canvas, loadImage } from '@napi-rs/canvas'

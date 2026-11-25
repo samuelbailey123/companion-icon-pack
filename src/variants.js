@@ -280,13 +280,13 @@ const utility = [
 
 /**
  * Shapes that land on buttons whose background is feedback-driven, and therefore need
- * high-contrast variants for the per-state swap. See `contrastVariant` in wiring.js.
+ * high-contrast variants for the per-state swap.
  */
 const CONTRAST_SHAPES = [
 	'projector', 'pa', 'clear-slide', 'clear-audio', 'camera', 'media', 'macro-run',
 	// The ATEM bus and its transition column: every one of these sits on a key whose background
 	// is red when live, green when cued, and near-black when neither. No single icon colour
-	// survives all three, so each needs its pair. See src/atem.js.
+	// survives all three, so each needs its pair.
 	'message', 'cut', 'auto',
 	// PP1 sits on strong flat colours the operator chose — bright orange transport, red clears,
 	// blue looks. A semantic hue on top of those is not reliably legible (the orange transport
@@ -304,9 +304,9 @@ const CONTRAST_SHAPES = [
 	// The PTZ stop key carries ATEM tally (red live, green preview), and the save key turns
 	// solid red while it is armed. Both are backgrounds the camera hue cannot survive.
 	'stop', 'preset-save',
-	// The Neo audio keys: hot mute and FX mute turn their key red when muted. See src/neo.js.
+	// The Neo audio keys: hot mute and FX mute turn their key red when muted.
 	'mic-muted', 'fx',
-	// The Neo start/stop keys turn green, amber and red as a clock runs down. See src/neo.js.
+	// The Neo start/stop keys turn green, amber and red as a clock runs down.
 	'timer-stop',
 ]
 
@@ -315,7 +315,7 @@ const contrast = CONTRAST_SHAPES.flatMap((shape) => [
 	icon(`${shape}-ink`, shape, 'ink', 'contrast', `${shape} (dark, for light backgrounds)`),
 ]).concat(
 	// A Neo info screen turns amber or red with a low battery; the battery itself, in its own
-	// amber or red, would vanish into it. See batteryWarnings in src/neo.js.
+	// amber or red, would vanish into it.
 	[0, 2].map((n) => icon(`battery-${n}-paper`, 'battery', 'paper', 'contrast', `Transmitter battery ${n} of 4 (light)`))
 )
 

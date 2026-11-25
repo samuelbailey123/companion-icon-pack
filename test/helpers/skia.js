@@ -1,10 +1,3 @@
-/**
- * Rasterisation helpers backed by Skia through `@napi-rs/canvas`.
- *
- * package.json pins `@napi-rs/canvas` to the exact build Companion 5 bundles (1.0.1).
- * Version drift between what we test with and what the deck draws with would quietly
- * invalidate every legibility assertion here.
- */
 import { Canvas, loadImage } from '@napi-rs/canvas'
 
 /**

@@ -65,9 +65,6 @@ describe('contrast against the intended button background', () => {
 	})
 
 	it('the paper/ink pair covers the whole luminance range between them', () => {
-		// Sweep every grey from black to white: at each one, at least one of the pair must
-		// clear the threshold. That is what lets `contrastVariant` guarantee legibility on
-		// any feedback colour, not just the ones this rig happens to use today.
 		for (let i = 0; i <= 255; i += 5) {
 			const bg = `#${i.toString(16).padStart(2, '0').repeat(3)}`
 			const best = Math.max(
